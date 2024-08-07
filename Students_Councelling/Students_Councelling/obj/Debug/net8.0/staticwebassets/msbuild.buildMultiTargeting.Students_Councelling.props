@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Students_Councelling.props" />
+</Project>

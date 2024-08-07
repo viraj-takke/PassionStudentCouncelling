@@ -1,0 +1,251 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\My_Projects\\Students_Councelling\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{91BC2721-048C-4798-8890-6096D307B594}|Students_Councelling\\Students_Councelling.csproj|d:\\my_projects\\students_councelling\\students_councelling\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91BC2721-048C-4798-8890-6096D307B594}|Students_Councelling\\Students_Councelling.csproj|solutionrelative:students_councelling\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91BC2721-048C-4798-8890-6096D307B594}|Students_Councelling\\Students_Councelling.csproj|d:\\my_projects\\students_councelling\\students_councelling\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{91BC2721-048C-4798-8890-6096D307B594}|Students_Councelling\\Students_Councelling.csproj|solutionrelative:students_councelling\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91BC2721-048C-4798-8890-6096D307B594}|Students_Councelling\\Students_Councelling.csproj|d:\\my_projects\\students_councelling\\students_councelling\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{91BC2721-048C-4798-8890-6096D307B594}|Students_Councelling\\Students_Councelling.csproj|solutionrelative:students_councelling\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91BC2721-048C-4798-8890-6096D307B594}|Students_Councelling\\Students_Councelling.csproj|d:\\my_projects\\students_councelling\\students_councelling\\middleware\\customauthenticationmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91BC2721-048C-4798-8890-6096D307B594}|Students_Councelling\\Students_Councelling.csproj|solutionrelative:students_councelling\\middleware\\customauthenticationmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91BC2721-048C-4798-8890-6096D307B594}|Students_Councelling\\Students_Councelling.csproj|d:\\my_projects\\students_councelling\\students_councelling\\models\\dal\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91BC2721-048C-4798-8890-6096D307B594}|Students_Councelling\\Students_Councelling.csproj|solutionrelative:students_councelling\\models\\dal\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91BC2721-048C-4798-8890-6096D307B594}|Students_Councelling\\Students_Councelling.csproj|d:\\my_projects\\students_councelling\\students_councelling\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91BC2721-048C-4798-8890-6096D307B594}|Students_Councelling\\Students_Councelling.csproj|solutionrelative:students_councelling\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91BC2721-048C-4798-8890-6096D307B594}|Students_Councelling\\Students_Councelling.csproj|d:\\my_projects\\students_councelling\\students_councelling\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91BC2721-048C-4798-8890-6096D307B594}|Students_Councelling\\Students_Councelling.csproj|solutionrelative:students_councelling\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91BC2721-048C-4798-8890-6096D307B594}|Students_Councelling\\Students_Councelling.csproj|d:\\my_projects\\students_councelling\\students_councelling\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{91BC2721-048C-4798-8890-6096D307B594}|Students_Councelling\\Students_Councelling.csproj|solutionrelative:students_councelling\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91BC2721-048C-4798-8890-6096D307B594}|Students_Councelling\\Students_Councelling.csproj|d:\\my_projects\\students_councelling\\students_councelling\\models\\viewmodels\\students.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91BC2721-048C-4798-8890-6096D307B594}|Students_Councelling\\Students_Councelling.csproj|solutionrelative:students_councelling\\models\\viewmodels\\students.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91BC2721-048C-4798-8890-6096D307B594}|Students_Councelling\\Students_Councelling.csproj|d:\\my_projects\\students_councelling\\students_councelling\\models\\repository\\accountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91BC2721-048C-4798-8890-6096D307B594}|Students_Councelling\\Students_Councelling.csproj|solutionrelative:students_councelling\\models\\repository\\accountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91BC2721-048C-4798-8890-6096D307B594}|Students_Councelling\\Students_Councelling.csproj|d:\\my_projects\\students_councelling\\students_councelling\\models\\dto\\students_results.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91BC2721-048C-4798-8890-6096D307B594}|Students_Councelling\\Students_Councelling.csproj|solutionrelative:students_councelling\\models\\dto\\students_results.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91BC2721-048C-4798-8890-6096D307B594}|Students_Councelling\\Students_Councelling.csproj|d:\\my_projects\\students_councelling\\students_councelling\\interface\\iaccountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91BC2721-048C-4798-8890-6096D307B594}|Students_Councelling\\Students_Councelling.csproj|solutionrelative:students_councelling\\interface\\iaccountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91BC2721-048C-4798-8890-6096D307B594}|Students_Councelling\\Students_Councelling.csproj|d:\\my_projects\\students_councelling\\students_councelling\\models\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91BC2721-048C-4798-8890-6096D307B594}|Students_Councelling\\Students_Councelling.csproj|solutionrelative:students_councelling\\models\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91BC2721-048C-4798-8890-6096D307B594}|Students_Councelling\\Students_Councelling.csproj|d:\\my_projects\\students_councelling\\students_councelling\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{91BC2721-048C-4798-8890-6096D307B594}|Students_Councelling\\Students_Councelling.csproj|solutionrelative:students_councelling\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\My_Projects\\Students_Councelling\\Students_Councelling\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Students_Councelling\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\My_Projects\\Students_Councelling\\Students_Councelling\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Students_Councelling\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAQwCEAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-06T12:32:46.379Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "D:\\My_Projects\\Students_Councelling\\Students_Councelling\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "Students_Councelling\\Views\\Account\\Login.cshtml",
+              "ToolTip": "D:\\My_Projects\\Students_Councelling\\Students_Councelling\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "Students_Councelling\\Views\\Account\\Login.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACwAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-06T11:57:45.488Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CustomAuthenticationMiddleware.cs",
+              "DocumentMoniker": "D:\\My_Projects\\Students_Councelling\\Students_Councelling\\Middleware\\CustomAuthenticationMiddleware.cs",
+              "RelativeDocumentMoniker": "Students_Councelling\\Middleware\\CustomAuthenticationMiddleware.cs",
+              "ToolTip": "D:\\My_Projects\\Students_Councelling\\Students_Councelling\\Middleware\\CustomAuthenticationMiddleware.cs",
+              "RelativeToolTip": "Students_Councelling\\Middleware\\CustomAuthenticationMiddleware.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAADwvyMAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-07T07:12:14.052Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\My_Projects\\Students_Councelling\\Students_Councelling\\Program.cs",
+              "RelativeDocumentMoniker": "Students_Councelling\\Program.cs",
+              "ToolTip": "D:\\My_Projects\\Students_Councelling\\Students_Councelling\\Program.cs",
+              "RelativeToolTip": "Students_Councelling\\Program.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAAAABsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T11:35:08.558Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "D:\\My_Projects\\Students_Councelling\\Students_Councelling\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Students_Councelling\\Controllers\\AccountController.cs",
+              "ToolTip": "D:\\My_Projects\\Students_Councelling\\Students_Councelling\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Students_Councelling\\Controllers\\AccountController.cs",
+              "ViewState": "AQIAACsAAAAAAAAAAAAIwCQAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T11:52:09.617Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\My_Projects\\Students_Councelling\\Students_Councelling\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Students_Councelling\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\My_Projects\\Students_Councelling\\Students_Councelling\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Students_Councelling\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAA4AAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T12:01:32.027Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\My_Projects\\Students_Councelling\\Students_Councelling\\appsettings.json",
+              "RelativeDocumentMoniker": "Students_Councelling\\appsettings.json",
+              "ToolTip": "D:\\My_Projects\\Students_Councelling\\Students_Councelling\\appsettings.json",
+              "RelativeToolTip": "Students_Councelling\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-08-06T13:26:22.329Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "D:\\My_Projects\\Students_Councelling\\Students_Councelling\\Models\\DAL\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Students_Councelling\\Models\\DAL\\ApplicationDbContext.cs",
+              "ToolTip": "D:\\My_Projects\\Students_Councelling\\Students_Councelling\\Models\\DAL\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Students_Councelling\\Models\\DAL\\ApplicationDbContext.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAwAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T11:44:52.26Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Students.cs",
+              "DocumentMoniker": "D:\\My_Projects\\Students_Councelling\\Students_Councelling\\Models\\Viewmodels\\Students.cs",
+              "RelativeDocumentMoniker": "Students_Councelling\\Models\\Viewmodels\\Students.cs",
+              "ToolTip": "D:\\My_Projects\\Students_Councelling\\Students_Councelling\\Models\\Viewmodels\\Students.cs",
+              "RelativeToolTip": "Students_Councelling\\Models\\Viewmodels\\Students.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAAwAkAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-07T05:54:25.106Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AccountRepository.cs",
+              "DocumentMoniker": "D:\\My_Projects\\Students_Councelling\\Students_Councelling\\Models\\Repository\\AccountRepository.cs",
+              "RelativeDocumentMoniker": "Students_Councelling\\Models\\Repository\\AccountRepository.cs",
+              "ToolTip": "D:\\My_Projects\\Students_Councelling\\Students_Councelling\\Models\\Repository\\AccountRepository.cs",
+              "RelativeToolTip": "Students_Councelling\\Models\\Repository\\AccountRepository.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAYAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T13:20:22.953Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Students_Results.cs",
+              "DocumentMoniker": "D:\\My_Projects\\Students_Councelling\\Students_Councelling\\Models\\DTO\\Students_Results.cs",
+              "RelativeDocumentMoniker": "Students_Councelling\\Models\\DTO\\Students_Results.cs",
+              "ToolTip": "D:\\My_Projects\\Students_Councelling\\Students_Councelling\\Models\\DTO\\Students_Results.cs",
+              "RelativeToolTip": "Students_Councelling\\Models\\DTO\\Students_Results.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAYAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-07T06:07:10.203Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "IAccountRepository.cs",
+              "DocumentMoniker": "D:\\My_Projects\\Students_Councelling\\Students_Councelling\\Interface\\IAccountRepository.cs",
+              "RelativeDocumentMoniker": "Students_Councelling\\Interface\\IAccountRepository.cs",
+              "ToolTip": "D:\\My_Projects\\Students_Councelling\\Students_Councelling\\Interface\\IAccountRepository.cs",
+              "RelativeToolTip": "Students_Councelling\\Interface\\IAccountRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAgAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T13:21:07.718Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "LoginViewModel.cs",
+              "DocumentMoniker": "D:\\My_Projects\\Students_Councelling\\Students_Councelling\\Models\\Viewmodels\\LoginViewModel.cs",
+              "RelativeDocumentMoniker": "Students_Councelling\\Models\\Viewmodels\\LoginViewModel.cs",
+              "ToolTip": "D:\\My_Projects\\Students_Councelling\\Students_Councelling\\Models\\Viewmodels\\LoginViewModel.cs",
+              "RelativeToolTip": "Students_Councelling\\Models\\Viewmodels\\LoginViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwBAAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T11:54:11.727Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\My_Projects\\Students_Councelling\\Students_Councelling\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Students_Councelling\\Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\My_Projects\\Students_Councelling\\Students_Councelling\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Students_Councelling\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-06T11:25:55.322Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
