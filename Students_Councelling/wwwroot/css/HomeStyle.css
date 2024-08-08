@@ -22,6 +22,7 @@
     position: relative;
     overflow: hidden;
     padding: 0 15px; /* Add some padding for better mobile spacing */
+    margin-top:105px;
 }
 
 /* Media Queries for Responsive Design */
