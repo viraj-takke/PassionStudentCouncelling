@@ -18,5 +18,63 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    background: url('/images/Background.jpg') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Arial', sans-serif;
+    color: #ffffff;
 }
+.card {
+    background: rgb(100, 100, 100);
+    border: none;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
+.card-header, .card-footer {
+    background: none;
+    border-bottom: none;
+    border-top: none;
+}
+
+.btn-primary {
+    background-color: #1f4037;
+    border: none;
+}
+
+    .btn-primary:hover {
+        background-color: #99f2c8;
+        color: #000;
+    }
+
+.form-control {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: #ffffff;
+}
+
+    .form-control:focus {
+        background: rgba(255, 255, 255, 0.2);
+        box-shadow: none;
+        color: #ffffff;
+    }
+
+label {
+    color: #B0C4FF;
+}
+
+.form-check-label {
+    color: #B0C4FF;
+}
+
+a {
+    color: #B0C4FF;
+    text-decoration: underline;
+}
+
+    a:hover {
+        color: #99f2c8;
+        text-decoration: none;
+    }
