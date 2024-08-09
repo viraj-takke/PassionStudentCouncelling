@@ -1,0 +1,67 @@
+﻿@model Students_Councelling.Models.Viewmodels.Students
+
+@{
+    ViewData["Title"] = "Registration";
+}
+
+<h1 class="row justify-content-center">Students Registration</h1>
+<hr />
+<div class="row justify-content-center">
+    <div class="col-md-4">
+        <form asp-action="Registration">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="text-danger">
+                @Html.ValidationMessage("ErrorMessage")
+            </div>
+            <div class="text-success">
+                @Html.ValidationMessage("SuccessMessage")
+            </div>
+            <div class="form-group">
+                <label asp-for="FirstName" class="control-label">First Name</label>
+                <input asp-for="FirstName" class="form-control" />
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LastName" class="control-label">Last Name</label>
+                <input asp-for="LastName" class="form-control" />
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Phone" class="control-label"></label>
+                <input asp-for="Phone" class="form-control" />
+                <span asp-validation-for="Phone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="InstituteName" class="control-label">Institute Name</label>
+                <input asp-for="InstituteName" class="form-control" />
+                <span asp-validation-for="InstituteName" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3">
+                <label asp-for="Standard" class="control-label"></label>
+                <input asp-for="Standard" class="form-control" />
+                <span asp-validation-for="Standard" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3">
+                <input type="submit" value="Register" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="text-center mt-3">
+    <a class="btn btn-secondary" asp-action="Login">Back to Login</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

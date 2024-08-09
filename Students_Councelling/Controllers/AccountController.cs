@@ -61,6 +61,28 @@ namespace Students_Councelling.Controllers
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
             return RedirectToAction("Login", "Account");
         }
+
+        [HttpGet]
+        public async Task<IActionResult> Registration()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Registration(Students model)
+        {
+            var result = await _accountRepository.Registration_StudentsAsync(model);
+            if (result == true) 
+            {
+                ModelState.AddModelError("SuccessMessage", "Registered Successfully!");
+            }
+            else
+            {
+                ModelState.AddModelError("ErrorMessage", "Registration Failed!");
+            }
+            return View();
+        }
     }
 
 }

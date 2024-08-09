@@ -19,7 +19,7 @@ html {
 
 body {
     margin-bottom: 60px;
-    background: url('/images/Background.jpg') no-repeat center center;
+    background: url('/images/Background.png') no-repeat center center;
     background-size: cover;
     background-attachment: fixed;
     font-family: 'Arial', sans-serif;
@@ -78,3 +78,35 @@ a {
         color: #99f2c8;
         text-decoration: none;
     }
+
+.nav-link.dropdown-toggle::after {
+    display: none;
+}
+
+/* Ensure dropdown items are displayed correctly */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    margin: 0;
+    padding: 0;
+    box-shadow: 0 0 0.125rem rgba(0, 0, 0, 0.2);
+}
+
+/* Show dropdown on hover */
+.nav-item:hover .dropdown-menu {
+    display: block;
+}
+
+/* Hide the dropdown toggle arrow */
+.nav-link.dropdown-toggle::after {
+    display: none;
+}
+
+/* Adjust positioning for dropdown items */
+.navbar-nav .dropdown-menu {
+    top: 100%;
+    left: -30px;
+}

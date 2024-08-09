@@ -1,4 +1,11 @@
-﻿<!DOCTYPE html>
+﻿@using Students_Councelling.Interface
+@inject IAccountRepository _accountRepository
+
+@{
+    var email = User.Identity.Name;
+    var fullname = _accountRepository.GetStudentDetailsByMailId(email) ?? "Guest";
+}
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -9,6 +16,7 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/HomeStyle.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 </head>
 <body>
     <header>
@@ -16,8 +24,8 @@
         {
             <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm fixed-top">
                 <div class="container">
-                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
-                        <img src="~/images/Passion.png" alt="Students Counselling Logo" style="max-width:70px" />
+                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index" style="font-weight:bold">
+                        <img src="~/images/Passion.png" alt="Students Counselling Logo" style="max-width:70px;" />
                         Passion Consultancy
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,16 +46,23 @@
 
                         <ul class="navbar-nav ms-auto">
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    @User.Identity.Name
+                                <a class="nav-link dropdown-toggle d-flex align-items-center" id="navbarDropdown" role="button" aria-expanded="false">
+                                    <i class="fas fa-user-circle" style="margin-right:8px;"></i>
+                                    @fullname
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                     <li>
-                                        <a class="dropdown-item" asp-controller="Account" asp-action="Edit">Edit Profile</a>
+                                        <a class="dropdown-item" asp-controller="Account" asp-action="Edit">
+                                            <i class="fas fa-user-edit" style="margin-right:5px;"></i>
+                                            Edit Profile
+                                        </a>
                                     </li>
                                     <li>
                                         <form asp-controller="Account" asp-action="Logout" method="post">
-                                            <button type="submit" class="dropdown-item">Logout</button>
+                                            <button type="submit" class="dropdown-item">
+                                                <i class="fas fa-sign-out-alt" style="margin-right:5px;"></i>
+                                                Logout
+                                            </button>
                                         </form>
                                     </li>
                                 </ul>
@@ -65,7 +80,7 @@
         </main>
     </div>
 
-    <footer class="footer text-muted mt-4 py-3">
+    <footer class="footer text-muted mt-5">
         <div class="container text-center">
             <p>&copy; 2024 - Passion Trainer And Consultancy</p>
             @* <p>
@@ -76,7 +91,7 @@
             <div class="social-icons mt-2">
                 <a href="#"><img src="~/images/youtube-icon.png" alt="YouTube" /></a>
                 <a href="#"><img src="~/images/twitter-icon.png" alt="Twitter" /></a>
-                <a href="#"><img src="~/images/behance-icon.png" alt="Behance" /></a>
+                <a href="#"><img src="~/images/facebook-icon.png" style="padding:3px;" alt="Facebook" /></a>
                 <a href="#"><img src="~/images/instagram-icon.png" alt="Instagram" /></a>
             </div>
         </div>
