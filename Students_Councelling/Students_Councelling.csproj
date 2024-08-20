@@ -11,7 +11,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <_ContentIncludedByDefault Remove="wwwroot\css\HomeStyle.css" />
     <_ContentIncludedByDefault Remove="wwwroot\js\User.js" />
   </ItemGroup>
 
