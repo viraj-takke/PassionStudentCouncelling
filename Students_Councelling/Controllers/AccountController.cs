@@ -5,6 +5,8 @@ using Microsoft.AspNetCore.Mvc;
 using Students_Councelling.Interface;
 using Students_Councelling.Models.DTO;
 using Students_Councelling.Models.Viewmodels;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Students_Councelling.Controllers
 {
@@ -28,27 +30,26 @@ namespace Students_Councelling.Controllers
         [HttpPost]
         public async Task<IActionResult> Login(LoginViewModel model)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-                var student = await _accountRepository.LoginAsync(model.Email, model.Password);
-                if (student != null)
-                {
-                    CookieOptions options = new CookieOptions
-                    {
-                        Expires = model.RememberMe ? DateTime.Now.AddDays(Convert.ToInt32(_configuration["Sessiontimeout"])) : DateTime.Now.AddMinutes(20),
-                        IsEssential = true,
-                        Secure = true,
-                        HttpOnly = true
-                    };
-                    Response.Cookies.Append("StudentId", student.StudentId.ToString(), options);
-                    Response.Cookies.Append("Email", student.Email, options);
-
-                    return RedirectToAction("Index", "Home");
-                }
-                ModelState.AddModelError("ErrorMessage", "Email or Password is Invalid");
+                return View(model);
             }
+            var student = await _accountRepository.LoginAsync(model.Email, model.Password);
+            if (student != null)
+            {
+                CookieOptions options = new CookieOptions
+                {
+                    Expires = model.RememberMe ? DateTime.Now.AddDays(Convert.ToInt32(_configuration["Sessiontimeout"])) : DateTime.Now.AddMinutes(20),
+                    IsEssential = true,
+                    Secure = true,
+                    HttpOnly = true
+                };
+                Response.Cookies.Append("StudentId", student.StudentId.ToString(), options);
+                Response.Cookies.Append("Email", student.Email, options);
 
-            return View(model);
+                return Json(new { success = true, message = "Login successful", url = Url.Action("Index", "Home") });
+            }
+            return Json(new { success = false, message = "Username or password is incorrect" });
         }
 
         [HttpPost]
@@ -72,17 +73,65 @@ namespace Students_Councelling.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Registration(Students model)
         {
-            var result = await _accountRepository.Registration_StudentsAsync(model);
-            if (result == true) 
+            if (!ModelState.IsValid)
             {
-                ModelState.AddModelError("SuccessMessage", "Registered Successfully!");
+                return View(model);
             }
-            else
+            var studentId = _accountRepository.GetStudentIdByMailId(model.Email);
+
+            if (studentId != 0)
             {
-                ModelState.AddModelError("ErrorMessage", "Registration Failed!");
+                return Json(new { success = false, message = "The EMail id is Already Registered!" });
+            }
+
+            var registrationResult = await _accountRepository.Registration_StudentsAsync(model);
+            if (registrationResult)
+            {
+                var redirectUrl = Url.Action("Registration", "Account");
+                return Json(new { success = true, message = "Registration successful", url = redirectUrl });
+            }
+
+            return Json(new { success = false, message = "Registration Failed!" });
+        }
+
+        [Authorize]
+        [HttpGet]
+        public async Task<IActionResult> EditProfile()
+        {
+            if (User.Identity.Name != null)
+            {
+                var student = await _accountRepository.GetStudentByMailId(User.Identity.Name);
+                if (student == null)
+                {
+                    return NotFound();
+                }
+                return View(student);
             }
             return View();
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> EditProfile(Students model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+
+            var result = await _accountRepository.EditProfileAsync(model);
+            if (result)
+            {
+                return Json(new { success = true, message = "Profile Updated Successfully!", url = Url.Action("EditProfile", "Account") });
+            }
+            else
+            {
+                return Json(new { success = false, message = "Profile update failed!" });
+            }
+
+            return View(model);
+        }
+
     }
 
 }

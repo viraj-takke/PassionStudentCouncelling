@@ -1,24 +1,27 @@
 ﻿@model Students_Councelling.Models.Viewmodels.Students
 
 @{
-    ViewData["Title"] = "Registration";
+    ViewData["Title"] = "EditProfile";
 }
 
+<h1 class="row justify-content-center">Edit Profile</h1>
 
+<h4>Students</h4>
+<hr />
 <div class="row justify-content-center">
     <div class="col-md-4">
-        <h1 class="row justify-content-center mt-5">Students Registration</h1>
+        <h1 class="row justify-content-center mt-4">Edit Profile</h1>
         <hr />
-        <form id="registerForm" asp-action="Registration">
+        <form id="editForm" asp-action="EditProfile">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            
+            <input type="hidden" asp-for="StudentId" />
             <div class="form-group">
-                <label asp-for="FirstName" class="control-label">First Name</label>
+                <label asp-for="FirstName" class="control-label"></label>
                 <input asp-for="FirstName" class="form-control" />
                 <span asp-validation-for="FirstName" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="LastName" class="control-label">Last Name</label>
+                <label asp-for="LastName" class="control-label"></label>
                 <input asp-for="LastName" class="form-control" />
                 <span asp-validation-for="LastName" class="text-danger"></span>
             </div>
@@ -38,24 +41,24 @@
                 <span asp-validation-for="Phone" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="InstituteName" class="control-label">Institute Name</label>
+                <label asp-for="InstituteName" class="control-label"></label>
                 <input asp-for="InstituteName" class="form-control" />
                 <span asp-validation-for="InstituteName" class="text-danger"></span>
             </div>
-            <div class="form-group mb-3">
+            <div class="form-group">
                 <label asp-for="Standard" class="control-label"></label>
                 <input asp-for="Standard" class="form-control" />
                 <span asp-validation-for="Standard" class="text-danger"></span>
             </div>
-            <div class="form-group mb-3">
-                <input type="submit" value="Register" class="btn btn-primary" />
+            <div class="form-group mt-3">
+                <input type="submit" value="Save" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div class="text-center mt-3">
-    <a class="btn btn-secondary" asp-action="Login">Back to Login</a>
+    <a class="btn btn-secondary" asp-controller="Home" asp-action="Index">Back to Home</a>
 </div>
 
 @section Scripts {
@@ -64,22 +67,22 @@
 
     <script type="text/javascript">
         $(document).ready(function () {
-            $("#registerForm").submit(function (e) {
+            $("#editForm").submit(function (e) {
                 e.preventDefault();
 
-                // Toastr options configuration
+
                 toastr.options = {
                     "closeButton": true,
                     "debug": false,
                     "newestOnTop": true,
                     "progressBar": true,
-                    "positionClass": "toast-top-center",
+                    "positionClass": "toast-top-right",
                     "preventDuplicates": true,
                     "onclick": null,
                     "showDuration": "300",
                     "hideDuration": "1000",
-                    "timeOut": "5000", // 5 seconds before fading out
-                    "extendedTimeOut": "1000", // Additional time when hovered
+                    "timeOut": "5000",
+                    "extendedTimeOut": "1000",
                     "showEasing": "swing",
                     "hideEasing": "linear",
                     "showMethod": "fadeIn",
@@ -88,7 +91,7 @@
 
                 $.ajax({
                     type: "POST",
-                    url: '@Url.Action("Registration", "Account")',
+                    url: '@Url.Action("EditProfile", "Account")',
                     data: $(this).serialize(),
                     success: function (response) {
                         if (response.success) {

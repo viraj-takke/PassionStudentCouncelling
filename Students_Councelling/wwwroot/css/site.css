@@ -19,7 +19,7 @@ html {
 
 body {
     margin-bottom: 60px;
-    background: url('/images/Background.png') no-repeat center center;
+    background: url('/images/Background.jpg') no-repeat center center;
     background-size: cover;
     background-attachment: fixed;
     font-family: 'Arial', sans-serif;
@@ -110,3 +110,120 @@ a {
     top: 100%;
     left: -30px;
 }
+
+.about-us-container {
+    padding: 2rem;
+    background-color: #f4f4f9;
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Hero Section */
+.hero-section {
+    background-image: url('/images/About-Us.jpg');
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    padding: 5rem 0;
+    text-align: center;
+    color: white;
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        background-size: cover; /* Keeps the image covering the entire section */
+        background-position: center top; /* Adjusts position to show the top of the image */
+        padding: 4rem 1rem; /* Adjusts padding for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        background-size: cover; /* Ensures the image covers the entire section */
+        background-position: center top; /* Ensures the top part of the image is visible */
+        padding: 3rem 0.5rem; /* Further adjusts padding for small screens */
+    }
+}
+
+
+.hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-family: 'Montserrat', sans-serif; /* Modern, bold sans-serif font */
+    color: #ff4d4d; /* A vibrant red color */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Black shadow for added depth */
+    letter-spacing: 1.5px; /* Slightly increased spacing for emphasis */
+    text-transform: uppercase; /* Makes the text all uppercase for a stronger impact */
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+}
+
+/* About Content */
+.about-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.section {
+    margin-bottom: 3rem;
+}
+
+    .section h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        background: linear-gradient(to right, #ff0000, #000000);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .section p, .section ul {
+        font-size: 1.1rem;
+        line-height: 1.8;
+    }
+
+    .section ul {
+        list-style-type: disc;
+        margin-left: 20px;
+    }
+
+/* Team Section */
+.team-members {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-around;
+}
+
+.team-member {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 250px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+    .team-member:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .team-member img {
+        border-radius: 50%;
+        margin-bottom: 1rem;
+    }
+
+    .team-member h3 {
+        font-size: 1.4rem;
+        margin-bottom: 0.5rem;
+        color: #333;
+    }
+
+    .team-member p {
+        font-size: 1rem;
+        color: #555;
+    }

@@ -7,7 +7,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\js\User.js" />
+  </ItemGroup>
+
+  <ItemGroup>
     <_ContentIncludedByDefault Remove="wwwroot\css\HomeStyle.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\js\User.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\js\User.js" />
   </ItemGroup>
 
   <ItemGroup>
