@@ -1,4 +1,4 @@
-﻿@model Students_Councelling.Models.Viewmodels.RegisterStudentDto
+﻿@model Students_Councelling.Models.Viewmodels.Students
 
 @{
     ViewData["Title"] = "Registration";
@@ -29,13 +29,8 @@
             </div>
             <div class="form-group">
                 <label asp-for="Password" class="control-label"></label>
-                <input asp-for="Password" class="form-control" type="password" />
+                <input asp-for="Password" class="form-control" />
                 <span asp-validation-for="Password" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="ConfirmPassword" class="control-label">Confirm Password</label>
-                <input asp-for="ConfirmPassword" class="form-control" type="password" />
-                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Phone" class="control-label"></label>

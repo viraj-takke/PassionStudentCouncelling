@@ -51,7 +51,7 @@ namespace Students_Councelling.Models.Repository
             return student;
         }
 
-        public async Task<bool> Registration_StudentsAsync(RegisterStudentDto model)
+        public async Task<bool> Registration_StudentsAsync(Students model)
         {
             if(model.FirstName == null)
             {

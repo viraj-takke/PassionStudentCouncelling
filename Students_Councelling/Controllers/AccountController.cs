@@ -71,7 +71,7 @@ namespace Students_Councelling.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Registration(RegisterStudentDto model)
+        public async Task<IActionResult> Registration(Students model)
         {
             if (!ModelState.IsValid)
             {

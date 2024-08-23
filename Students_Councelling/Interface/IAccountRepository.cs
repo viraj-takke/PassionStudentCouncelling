@@ -6,7 +6,7 @@ namespace Students_Councelling.Interface
     public interface IAccountRepository
     {
         Task<Students> LoginAsync(string email, string password);
-        Task<bool> Registration_StudentsAsync(RegisterStudentDto model);
+        Task<bool> Registration_StudentsAsync(Students model);
         string GetStudentDetailsByMailId(string mailid);
         long GetStudentIdByMailId(string mailid);
         Task<Students> GetStudentByMailId(string mailid);
