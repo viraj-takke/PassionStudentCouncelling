@@ -14,7 +14,8 @@ using Students_Councelling.Middleware;
 var builder = WebApplication.CreateBuilder(args);
 
 // Configure Serilog
-var documentsPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "AppLogs.txt");
+var documentsPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "AppLogs");
+Directory.CreateDirectory(documentsPath);
 var logFilePath = Path.Combine(documentsPath, "AppLogs.txt");
 
 Log.Logger = new LoggerConfiguration()
@@ -25,6 +26,8 @@ Log.Logger = new LoggerConfiguration()
 
 try
 {
+    builder.Host.UseSerilog();
+
     // Add services to the container.
     builder.Services.AddControllersWithViews();
 
@@ -42,9 +45,10 @@ try
     .AddCookie(CookieAuthenticationDefaults.AuthenticationScheme, options =>
     {
         options.Cookie.HttpOnly = true;
-        options.Cookie.SecurePolicy = CookieSecurePolicy.Always; // Ensure cookies are sent over HTTPS
-        options.Cookie.SameSite = SameSiteMode.Lax; // Adjust as needed
+        options.Cookie.SecurePolicy = builder.Environment.IsDevelopment() ? CookieSecurePolicy.SameAsRequest : CookieSecurePolicy.Always;
+        options.Cookie.SameSite = SameSiteMode.Lax;
         options.LoginPath = "/Account/Login";
+        options.AccessDeniedPath = "/Account/AccessDenied";
         options.ExpireTimeSpan = TimeSpan.FromDays(30);
         options.SlidingExpiration = true;
     });
@@ -52,7 +56,7 @@ try
     // Configure session
     builder.Services.AddSession(options =>
     {
-        options.IdleTimeout = TimeSpan.FromMinutes(30); // Set session timeout
+        options.IdleTimeout = TimeSpan.FromMinutes(30);
         options.Cookie.HttpOnly = true;
         options.Cookie.IsEssential = true;
     });
@@ -62,8 +66,14 @@ try
     // Configure the HTTP request pipeline.
     if (!app.Environment.IsDevelopment())
     {
-        app.UseExceptionHandler("/Home/Error");
+        //app.UseExceptionHandler("/Error/500");
+        app.UseStatusCodePagesWithReExecute("/Error/{0}");
         app.UseHsts();
+    }
+    else
+    {
+        app.UseDeveloperExceptionPage();
+        app.UseStatusCodePagesWithReExecute("/Error/{0}");
     }
 
     app.UseHttpsRedirection();
@@ -76,7 +86,6 @@ try
     app.UseAuthentication();
     app.UseAuthorization();
 
-    // This middleware should generally be after UseAuthorization if it depends on the user being authenticated
     app.UseMiddleware<CustomAuthenticationMiddleware>();
 
     app.MapControllerRoute(

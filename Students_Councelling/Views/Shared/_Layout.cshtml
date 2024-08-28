@@ -1,11 +1,4 @@
-﻿@using Students_Councelling.Interface
-@inject IAccountRepository _accountRepository
-
-@{
-    var email = User.Identity.Name;
-    var fullname = _accountRepository.GetStudentDetailsByMailId(email) ?? "Guest";
-}
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -15,67 +8,13 @@
     <!-- Local CSS Files -->
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/css/HomeStyle.css" asp-append-version="true" />
+    @* <link rel="stylesheet" href="~/css/HomeStyle.css" asp-append-version="true" /> *@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-    <link href="~/css/toastr.min.css" rel="stylesheet"  asp-append-version="true"/>
+    <link href="~/css/toastr.min.css" rel="stylesheet" asp-append-version="true" />
 </head>
 <body>
     <header>
-        @if (User.Identity.IsAuthenticated)
-        {
-            <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm fixed-top">
-                <div class="container">
-                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index" style="font-weight:bold">
-                        <img src="~/images/Passion.png" alt="Students Counselling Logo" style="max-width:70px;" />
-                        Passion Consultancy
-                    </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav me-auto">
-                            <li class="nav-item">
-                                <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Exams Schedule</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" asp-area="" asp-controller="Home" asp-action="UpcomingEvents">Upcoming Events</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Resources">Resources</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" asp-area="" asp-controller="AboutUs" asp-action="Index">About Us</a>
-                            </li>
-                        </ul>
-
-                        <ul class="navbar-nav ms-auto">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle d-flex align-items-center" id="navbarDropdown" role="button" aria-expanded="false">
-                                    <i class="fas fa-user-circle" style="margin-right:8px;"></i>
-                                    @fullname
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <li>
-                                        <a class="dropdown-item" asp-controller="Account" asp-action="EditProfile">
-                                            <i class="fas fa-user-edit" style="margin-right:5px;"></i>
-                                            Edit Profile
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <form asp-controller="Account" asp-action="Logout" method="post">
-                                            <button type="submit" class="dropdown-item">
-                                                <i class="fas fa-sign-out-alt" style="margin-right:5px;"></i>
-                                                Logout
-                                            </button>
-                                        </form>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        }
+        @await Html.PartialAsync("_Navbar")
     </header>
 
     <div class="container">
@@ -87,11 +26,6 @@
     <footer class="footer text-muted mt-5">
         <div class="container text-center">
             <p>&copy; 2024 - Passion Trainer And Consultancy</p>
-            @* <p>
-                <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a> |
-                <a href="https://www.example.com/terms">Terms</a> |
-                <a href="https://www.example.com/contact">Contact</a>
-            </p> *@
             <div class="social-icons mt-2">
                 <a href="#"><img src="~/images/youtube-icon.png" alt="YouTube" /></a>
                 <a href="#"><img src="~/images/twitter-icon.png" alt="Twitter" /></a>

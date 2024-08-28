@@ -1,0 +1,56 @@
+﻿@{
+    ViewData["Title"] = "Start Exam";
+}
+
+<div class="start-exam-container mt-5">
+    <h1 class="mt-5">Passion Examination</h1>
+
+    <div class="exam-details">
+        <p><strong>Exam:</strong> General Knowledge</p>
+        <p><strong>Duration:</strong> 1 hour</p>
+        <p><strong>Total Questions:</strong> 100</p>
+        <p><strong>Total Marks:</strong> 200</p>
+    </div>
+
+    @* <div class="countdown">
+        <p><strong>Time Remaining:</strong> <span id="time">60:00</span></p>
+    </div> *@
+
+    <div class="exam-rules">
+        <h3>Note :</h3>
+        <ul>
+            <li>No external resources allowed.</li>
+            <li>No backtracking on questions.</li>
+            <li>Once started, the exam cannot be paused.</li>
+        </ul>
+    </div>
+
+    <div class="agreement">
+        <input type="checkbox" id="agree" name="agree" />
+        <label for="agree">I have read and agree to the exam rules.</label>
+    </div>
+
+    <button class="start-exam-btn mt-3" onclick="startExam()">Start Exam</button>
+
+    <div class="error-message" id="error-message">
+        Please agree to the exam rules before starting.
+    </div>
+</div>
+
+<div class="Exam-footer">
+    <p>For technical support, please contact <a href="mailto:support@examportal.com">support@examportal.com</a></p>
+</div>
+
+@section Scripts {
+    <script>
+        function startExam() {
+            const agreeCheckbox = document.getElementById('agree');
+            const errorMessage = document.getElementById('error-message');
+            if (agreeCheckbox.checked) {
+                window.location.href = '@Url.Action("Index", "Homes")'; // Redirect to the actual exam page
+            } else {
+                errorMessage.style.display = "block";
+            }
+        }
+    </script>
+}

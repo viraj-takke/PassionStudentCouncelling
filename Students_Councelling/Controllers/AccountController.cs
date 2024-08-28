@@ -7,6 +7,7 @@ using Students_Councelling.Models.DTO;
 using Students_Councelling.Models.Viewmodels;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authorization;
+using System.Security.Claims;
 
 namespace Students_Councelling.Controllers
 {
@@ -34,21 +35,30 @@ namespace Students_Councelling.Controllers
             {
                 return View(model);
             }
+
             var student = await _accountRepository.LoginAsync(model.Email, model.Password);
             if (student != null)
             {
-                CookieOptions options = new CookieOptions
+                var claims = new List<Claim>
                 {
-                    Expires = model.RememberMe ? DateTime.Now.AddDays(Convert.ToInt32(_configuration["Sessiontimeout"])) : DateTime.Now.AddMinutes(20),
-                    IsEssential = true,
-                    Secure = true,
-                    HttpOnly = true
+                    new Claim(ClaimTypes.Name, student.Email),
+                    new Claim(ClaimTypes.NameIdentifier, student.StudentId.ToString())
                 };
-                Response.Cookies.Append("StudentId", student.StudentId.ToString(), options);
-                Response.Cookies.Append("Email", student.Email, options);
+
+                var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+
+                var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
+
+                await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, claimsPrincipal,
+                    new AuthenticationProperties
+                    {
+                        IsPersistent = model.RememberMe,
+                        ExpiresUtc = model.RememberMe ? DateTime.UtcNow.AddDays(Convert.ToInt32(_configuration["Sessiontimeout"])) : DateTime.UtcNow.AddMinutes(20)
+                    });
 
                 return Json(new { success = true, message = "Login successful", url = Url.Action("Index", "Home") });
             }
+
             return Json(new { success = false, message = "Username or password is incorrect" });
         }
 
@@ -56,9 +66,9 @@ namespace Students_Councelling.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Logout()
         {
-            Response.Cookies.Delete("StudentId");
-            Response.Cookies.Delete("Email");
-            HttpContext.Session.Clear();
+            //Response.Cookies.Delete("StudentId");
+            //Response.Cookies.Delete("Email");
+            //HttpContext.Session.Clear();
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
             return RedirectToAction("Login", "Account");
         }
